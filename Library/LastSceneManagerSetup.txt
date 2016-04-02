@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/The Actual level/The Real Level.unity
+- path: Assets/Title and Credits/Scenes/Title Scene.unity
   isLoaded: 1
   isActive: 1
