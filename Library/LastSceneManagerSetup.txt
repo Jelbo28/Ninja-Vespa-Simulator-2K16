@@ -1,4 +1,0 @@
-sceneSetups:
-- path: 'Assets/Cutscenes/Scenes/Cutscene #1 Part 1.unity'
-  isLoaded: 1
-  isActive: 1
