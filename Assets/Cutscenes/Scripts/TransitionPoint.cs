@@ -13,6 +13,11 @@ public class TransitionPoint : MonoBehaviour
         Application.LoadLevel(2);
     }
 
+    public void CutAudio()
+    {
+        this.gameObject.GetComponent<AudioSource>().mute = true;
+    }
+
     public void Disable()
     {
         this.gameObject.SetActive(false);
