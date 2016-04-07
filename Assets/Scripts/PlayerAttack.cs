@@ -3,21 +3,29 @@ using System.Collections;
 
 public class PlayerAttack : MonoBehaviour {
 
-//    public float Damage = Random.Range(1, 20);
-//
-//    PlayerHealth playerHealth;
-//    EnemyHealth enemyHealth;
-//    GameObject Player;
-//    GameObject Enemy;
-//	
-//	void Awake ()
-//    {
-//        Enemy = GameObject.FindGameObjectWithTag("Enemy");
-//        enemyHealth = Enemy.GetComponent<EnemyHealth>;
-//	}
-//	
-//	void Update ()
-//    {
-//	    
-//	}
+    
+	public int Damage = Random.Range(1, 20);
+
+	[SerializeField]
+    PlayerHealth playerHealth;
+	[SerializeField]
+	EnemyHealth enemyHealth;
+
+	void OnTriggerEnter2D (Collider2D other)
+    {
+		if (other.tag == "Enemy") 
+		{
+
+			Damage = Random.Range (1, 20);
+
+			this.gameObject.SetActive (false);
+
+			Attack ();
+		}
+        
+    }
+	public void Attack()
+    {    
+            enemyHealth.TakeDamage(Damage);
+    }
 }

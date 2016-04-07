@@ -8,7 +8,7 @@ public class PlayerNinjaStars : MonoBehaviour
 		if (other.gameObject.tag == "Enemy") 
 		{
 			Destroy (other.gameObject);
-			Destroy (this.gameObject);
+			this.enabled = false;
 		}
 	}
 }
