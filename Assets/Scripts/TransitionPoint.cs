@@ -25,6 +25,11 @@ public class TransitionPoint : MonoBehaviour
         Application.LoadLevel(2);
     }
 
+    public void Credits()
+    {
+        Application.LoadLevel(3);
+    }
+
     public void Disable()
     {
         this.gameObject.SetActive(false);

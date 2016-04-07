@@ -6,7 +6,7 @@ public class TitleUI : MonoBehaviour
 	public void Play()
 	{
 		//Debug.Log("Play");
-		Application.LoadLevel(1);
+		Application.LoadLevel(4);
 	}
 	
 	public void Quit()
@@ -17,11 +17,11 @@ public class TitleUI : MonoBehaviour
 
 	public void Credits()
 	{
-		Application.LoadLevel (2);
+		Application.LoadLevel (3);
 	}
 
 	public void Menu()
 	{
-		Application.LoadLevel (0);
+		Application.LoadLevel (2);
 	}
 }
