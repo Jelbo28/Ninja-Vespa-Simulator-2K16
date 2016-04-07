@@ -8,18 +8,29 @@ public class ThrowingStars : MonoBehaviour {
     GameObject FirePoint;
 
     public Rigidbody2D rb;
-    public float speed;
 
 	private bool FiredRecently;
+
+	private Vector2 m_Direction = new Vector2 (1, 0);
 
 	void Start()
 	{
 		FiredRecently = false;
+
+		rb = GetComponent<Rigidbody2D> ();
 	}
 
-	void FixedUpdate ()
+	void Update ()
     {
-        speed = 100;
+
+		if (Input.GetKey (KeyCode.A)) 
+		{
+			m_Direction = Vector2.left;
+		}
+		if (Input.GetKey (KeyCode.D)) 
+		{
+			m_Direction = Vector2.right;
+		}
         if (Input.GetKeyDown(KeyCode.E))
         {
 			if (FiredRecently == false) 
@@ -31,13 +42,18 @@ public class ThrowingStars : MonoBehaviour {
 				obj.transform.position = FirePoint.transform.position;
 				obj.transform.rotation = FirePoint.transform.rotation;
 				obj.SetActive(true);
-				obj.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * 5, ForceMode2D.Impulse);
+				obj.GetComponent<Rigidbody2D> ().velocity = rb.velocity;
+
+				Debug.Log (rb.velocity);
+
+				obj.GetComponent<Rigidbody2D>().AddRelativeForce(m_Direction * 5, ForceMode2D.Impulse);
 
 				FiredRecently = true;
 
 				BoolResetting ();
 			}
         }
+	
 	}
 
 	void BoolResetting()

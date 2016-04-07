@@ -22,6 +22,8 @@ public class PlayerHealth : MonoBehaviour {
 
         currentHealth -= amount;
 
+		Debug.Log (currentHealth);
+
         if(currentHealth <= 0 && !isDead)
         {
             Dead();
@@ -30,6 +32,8 @@ public class PlayerHealth : MonoBehaviour {
     public void Dead ()
     {
         isDead = true;
-        Application.LoadLevel(Application.loadedLevel);
+        //Application.LoadLevel(Application.loadedLevel);
+		Debug.Log("Dis dude is dead yo");
+		Debug.Break ();
     }
 }

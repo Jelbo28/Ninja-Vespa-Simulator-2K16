@@ -22,5 +22,16 @@ public class PlayerMovement : MonoBehaviour {
         {
             rb.AddForce(Vector3.up * 300);
         }
+
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.tag == "Ground" || other.tag == "Ramp") 
+		{
+			rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+			this.gameObject.transform.rotation = other.transform.rotation;
+		}
 	}
 }
