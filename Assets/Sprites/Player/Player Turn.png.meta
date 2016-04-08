@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 6fbbdc661cd8d40409d38ade5e553804
-timeCreated: 1460120357
+guid: aaf70b83809e38041b85a833d4fd70e2
+timeCreated: 1460122241
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Player Vertical Move_0
-    21300002: Player Vertical Move_1
-    21300004: Player Vertical Move_2
-    21300006: Player Vertical Move_3
+    21300000: Player Turn_0
+    21300002: Player Turn_1
+    21300004: Player Turn_2
+    21300006: Player Turn_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -54,41 +54,41 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Player Vertical Move_0
+    - name: Player Turn_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 606
+        x: 127
+        y: 431
         width: 460
         height: 300
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Player Vertical Move_1
+    - name: Player Turn_1
       rect:
         serializedVersion: 2
-        x: 537
-        y: 593
+        x: 627
+        y: 431
         width: 460
         height: 300
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Player Vertical Move_2
+    - name: Player Turn_2
       rect:
         serializedVersion: 2
-        x: 30
-        y: 202
+        x: 125
+        y: 101
         width: 460
         height: 300
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Player Vertical Move_3
+    - name: Player Turn_3
       rect:
         serializedVersion: 2
-        x: 532
-        y: 186
+        x: 634
+        y: 101
         width: 460
         height: 300
       alignment: 0
