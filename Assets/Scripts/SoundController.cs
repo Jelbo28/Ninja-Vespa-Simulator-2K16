@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TransitionPoint : MonoBehaviour
+public class SoundController : MonoBehaviour
 {
     [SerializeField]
     AudioSource[] sounds;
@@ -13,26 +13,6 @@ public class TransitionPoint : MonoBehaviour
         sounds = GetComponents<AudioSource>();
         engine = sounds[0];
         honk = sounds[1];
-    }
-
-    public void CutOne()
-    {
-		Application.LoadLevel(1);
-    }
-
-    public void CutTwo()
-    {
-        Application.LoadLevel(2);
-    }
-
-    public void Credits()
-    {
-        Application.LoadLevel(3);
-    }
-
-    public void Disable()
-    {
-        this.gameObject.SetActive(false);
     }
 
     public void CutAudio()
