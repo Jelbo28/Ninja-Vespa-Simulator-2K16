@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\RampDetection.cs" />
+     <Compile Include="Assets\Scripts\AnimationTransitions.cs" />
      <Compile Include="Assets\Scripts\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\EnemyDamage.cs" />
@@ -62,9 +63,8 @@
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerNinjaStars.cs" />
+     <Compile Include="Assets\Scripts\SoundController.cs" />
      <Compile Include="Assets\Scripts\ThrowingStars.cs" />
-     <Compile Include="Assets\Scripts\TitleUI.cs" />
-     <Compile Include="Assets\Scripts\TransitionPoint.cs" />
      <None Include="Assets\Fonts\Cyberdyne\Terms of Use End User License Agreement.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Fonts\Bulldozer\Terms of Use End User License Agreement.txt" />
