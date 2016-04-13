@@ -11,10 +11,14 @@ public class PlayerMovement : MonoBehaviour {
 
     [SerializeField]
     Animator anim;  
-	
+
+	private bool m_CannotJump;
+
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
+
+		m_CannotJump = false;
     }
 
 	void FixedUpdate ()
@@ -27,12 +31,22 @@ public class PlayerMovement : MonoBehaviour {
 			rb.AddForce (Vector3.left * speed);
 			anim.SetBool ("GoingRight", false);
 			anim.SetBool ("GoingLeft", true);
-		} else if (Input.GetKey (KeyCode.D)) {
+		}
+		else if (Input.GetKey (KeyCode.D)) 
+		{
 			rb.AddForce (Vector3.right * speed);
 			anim.SetBool ("GoingLeft", false);
 			anim.SetBool ("GoingRight", true);
-		} else if (Input.GetKeyDown (KeyCode.W)) {
-			rb.AddForce (Vector3.up * 300);
+		} 
+		else if (Input.GetKeyDown (KeyCode.W)) 
+		{
+			if (m_CannotJump == false) 
+			{
+				m_CannotJump = true;
+
+				rb.AddForce (Vector3.up * 300);
+				ResettingTheBool();
+			}
 		} 
 		else
 		{
@@ -41,13 +55,17 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other)
+	void ResettingTheBool()
 	{
-		if (other.tag == "Ground" || other.tag == "Ramp") 
-		{
-			rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-
-			this.gameObject.transform.rotation = other.transform.rotation;
-		}
+		StartCoroutine (ResetTheBool());
 	}
+
+	IEnumerator ResetTheBool()
+	{
+		yield return new WaitForSeconds (1.2f);
+
+		m_CannotJump = false;
+	}
+
 }
+
