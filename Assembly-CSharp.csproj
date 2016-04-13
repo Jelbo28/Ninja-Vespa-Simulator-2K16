@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0C945E42-3184-709C-88CE-86EE47A8FEA5}</ProjectGuid>
+    <ProjectGuid>{22487F71-0E9C-D030-9F6D-819917CA73A3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,13 +45,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FlooDetection.cs" />
      <Compile Include="Assets\Scripts\AnimationTransitions.cs" />
      <Compile Include="Assets\Scripts\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\EnemyDamage.cs" />
      <Compile Include="Assets\Scripts\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\EnemyNinjaStars.cs" />
+     <Compile Include="Assets\Scripts\FlooDetection.cs" />
      <Compile Include="Assets\Scripts\LeverPull.cs" />
      <Compile Include="Assets\Scripts\NStarSpeed.cs" />
      <Compile Include="Assets\Scripts\NinjaStarMovement.cs" />
@@ -66,8 +66,8 @@
      <Compile Include="Assets\Scripts\PlayerNinjaStars.cs" />
      <Compile Include="Assets\Scripts\SortingLayerExposer.cs" />
      <Compile Include="Assets\Scripts\SoundController.cs" />
+     <Compile Include="Assets\Scripts\SpikesofDeath.cs" />
      <Compile Include="Assets\Scripts\ThrowingStars.cs" />
-     <Compile Include="Assets\SpikesofDeath.cs" />
      <None Include="Assets\Fonts\Cyberdyne\Terms of Use End User License Agreement.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Fonts\Bulldozer\Terms of Use End User License Agreement.txt" />
@@ -80,7 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{D7B9B37A-248F-3B50-B661-D64F6B74183C}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{EF0689D7-8DA7-EC7E-59A4-377CBF474DB3}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

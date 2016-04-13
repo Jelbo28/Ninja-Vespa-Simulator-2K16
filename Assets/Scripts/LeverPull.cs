@@ -12,11 +12,11 @@ public class LeverPull : MonoBehaviour
     [SerializeField]
     GameObject mud;
 
-    void OnTriggerEnter2D(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (toggle == true /*other.tag == "Shuriken"*/)
+        if (other.tag == "NinjaStar")
         {
-            
+			toggle = true;
         }
     }
 
@@ -24,9 +24,9 @@ public class LeverPull : MonoBehaviour
     {
         if (toggle == true)
         {
-            brother.GetComponent<PolygonCollider2D>().enabled = false;
-            gameObject.GetComponent<SpriteRenderer>().sprite = leverDown;
-            mud.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 255);
+			brother.GetComponent<PolygonCollider2D>().enabled = false;
+			gameObject.GetComponent<SpriteRenderer>().sprite = leverDown;
+			mud.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 255);
         }
     }
 }
