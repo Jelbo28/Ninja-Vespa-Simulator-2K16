@@ -7,7 +7,7 @@ public class EnemyDamage : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Destroy(other.gameObject);
+            other.GetComponent<PlayerHealthBar>().Damage();
         }
     }
 }
