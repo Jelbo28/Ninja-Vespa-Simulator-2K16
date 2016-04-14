@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour {
 			{
 				m_CannotJump = true;
 
-				rb.AddForce (Vector3.up * 300);
+				rb.AddForce (Vector3.up * 450);
 				ResettingTheBool();
 			}
 		} 

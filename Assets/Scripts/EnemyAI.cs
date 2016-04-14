@@ -19,7 +19,7 @@ public class EnemyAI : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, RayAngle, distance);
 
         Debug.DrawRay(transform.localPosition, RayAngle, Color.yellow);
-
+        
 		if (hit.collider.tag == "Player")
         {
 			Debug.Log ("I fired a ray and see the player");
@@ -40,8 +40,9 @@ public class EnemyAI : MonoBehaviour
 
                 ResetingFire();
             }
+            
         }
-
+        
         Debug.Log(FiredRecently);
     }
 

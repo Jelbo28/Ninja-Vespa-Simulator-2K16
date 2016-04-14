@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerHealth : MonoBehaviour
-{
-    #region Austin's Code
-    /*
+public class PlayerHealth : MonoBehaviour {
+
     public int startHealth = 100;
     public int currentHealth;
 
@@ -38,8 +36,4 @@ public class PlayerHealth : MonoBehaviour
 		Debug.Log("Dis dude is dead yo");
 		Debug.Break ();
     }
-    */
-    #endregion
-
-
 }
