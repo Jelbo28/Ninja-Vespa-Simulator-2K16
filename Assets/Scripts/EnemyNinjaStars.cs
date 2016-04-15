@@ -7,7 +7,8 @@ public class EnemyNinjaStars : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Player") 
 		{
-			Destroy (other.gameObject);
+			//Destroy (other.gameObject);
+			other.GetComponent<PlayerHealthBar>().Damage();
 			Destroy (this.gameObject);
 		}
 	}

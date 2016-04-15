@@ -7,7 +7,7 @@ public class SpikesofDeath : MonoBehaviour
 	{
 		if (other.tag == "Player") 
 		{
-			Destroy (other.gameObject);
+			other.GetComponent<AnimationTransitions>().Gameover();
 		}
 	}
 }

@@ -33,7 +33,8 @@ public class PlayerHealthBar : MonoBehaviour
             health.CurrentValue -= 25f;
             if (health.CurrentValue <= 0)
             {
-                Debug.Log("Dead");
+                //Debug.Log("Dead");
+				gameObject.GetComponent<AnimationTransitions>().Gameover();
                 //GM.instance.GameLost();
             }
         }
